@@ -19,6 +19,7 @@ from django.urls import path,include
 from todo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",views.home_page, name="home"),
     path('todo/',views.todoList,name="todoList"),
     path('todo/create',views.create_todo,name="create_todo"),
 

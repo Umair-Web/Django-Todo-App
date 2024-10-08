@@ -4,6 +4,11 @@ def todoList(request):
     todos=Todos.objects.order_by('-id')
     return render(request,'todo/index.html',{'todos':todos})
 
+
+def home_page(request):
+    return redirect("todoList")
+
+
 def create_todo(request):
     if request.method=='POST':
         title=request.POST.get('title')
